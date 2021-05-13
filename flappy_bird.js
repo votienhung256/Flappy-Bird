@@ -12,15 +12,15 @@ let bird = new Bird(0,0)
 
 function run() {
     context.drawImage(hinhNen, 0, 0)
-    context.drawImage(birdImg, bird.x, bird.y)
+    context.drawImage(birdImg, bird.getX(), bird.getY())
 
     
-    bird.y += 3
+    bird.fall()
     requestAnimationFrame(run)
 }
 
 document.addEventListener("keydown", function () {
-    bird.y -= 60
+    bird.fly()
 })
 
 run()
