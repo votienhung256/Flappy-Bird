@@ -17,7 +17,7 @@ function run() {
 }
 
 document.addEventListener("keydown", function () {
-    bird.fly()
+    bird.jump()
 })
 
 run()
