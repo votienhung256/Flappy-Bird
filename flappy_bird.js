@@ -8,11 +8,7 @@ let width = 450
 birdImg.src = "images/bird.png"
 hinhNen.src = "images/hinhnen.png"
 
-let bird = {
-    x: 0,
-    y: 0
-}
-
+let bird = new Bird(0,0)
 
 function run() {
     context.drawImage(hinhNen, 0, 0)
