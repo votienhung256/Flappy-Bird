@@ -3,13 +3,14 @@ let context = canvas.getContext("2d")
 
 let birdImg = new Image()
 let hinhNen = new Image()
+let width = 450
 
 birdImg.src = "images/bird.png"
 hinhNen.src = "images/hinhnen.png"
 
 let bird = {
-    x: hinhNen.width / 5,
-    y: hinhNen.width / 2
+    x: 0,
+    y: 0
 }
 
 
