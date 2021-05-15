@@ -8,6 +8,8 @@ function Warp(xPos, yPos, size) {
     let _xPos = xPos
     let _yPos = yPos
 
+    let height = 242
+
     this.getTopPipeImg = function () {
         return topPipeImg
     }
@@ -24,9 +26,9 @@ function Warp(xPos, yPos, size) {
         return _size
     }
     this.getTopPipeYPosition = function () {
-        return _yPos - _size / 2
+        return (_yPos - _size / 2) - height
     }
     this.getBotPipeYPosition = function () {
-        return _yPos + _size / 2
+        return (_yPos + _size / 2)
     }
 }

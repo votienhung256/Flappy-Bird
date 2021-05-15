@@ -31,7 +31,7 @@ function ViewEngine(game) {
 
         //ve pipe
         let warp = game.getWarp()
-        context.drawImage(warp.getTopPipeImg(),warp.getX(),0)
+        context.drawImage(warp.getTopPipeImg(),warp.getX(),warp.getTopPipeYPosition())
         //ve pipe co chieu cao tuy y
         //ve pipe co toa do tuy y
         //ong lien tuc chay lui
