@@ -1,4 +1,7 @@
 function Bird(x, y) {
+    let birdImg = new Image()
+    birdImg.src = "images/bird.png"
+    
     let _x = x
     let _y = y
     let _vY = 3
@@ -6,7 +9,6 @@ function Bird(x, y) {
         _y += _vY
         _vY++
     }
-
 
     setInterval(fall, 1000 / 30)
 
@@ -20,5 +22,8 @@ function Bird(x, y) {
 
     this.jump = function () {
         _vY = -15
+    }
+    this.getImage=function(){
+        return birdImg
     }
 }
