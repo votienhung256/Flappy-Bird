@@ -1,6 +1,6 @@
 function Game() {
     let bird = new Bird(50, 0)
-    let pipe = new Pipe(288, 0)
+    let warp = new Warp(0,0,70)
 
     document.addEventListener("keydown", function () {
         bird.jump()
@@ -8,7 +8,7 @@ function Game() {
     this.getBird = function () {
         return bird
     }
-    this.getPipe = function () {
-        return pipe
+    this.getWarp = function () {
+        return warp
     }
 }
