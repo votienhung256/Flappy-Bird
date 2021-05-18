@@ -9,8 +9,12 @@ function ViewEngine(game) {
 
     drawFrame()
     function drawFrame() {
+        let bird = game.getBird()
+        let warp = game.getWarp()
+
         context.drawImage(hinhNen, 0, 0)
-        context.drawImage(game.getBird().getImage(), game.getBird().getX(), game.getBird().getY())
+
+        context.drawImage(bird.getImage(), bird.getX(), bird.getY())
 
         // for (let i = 0; i < game.getPipe().pipes.length; i++) {
         //     context.drawImage(game.getPipe().getImagePipeUp(), game.getPipe().pipes[i].x, game.getPipe().pipes[i].y)
@@ -29,12 +33,13 @@ function ViewEngine(game) {
         //     }
         // }
 
-        //ve pipe
-        let warp = game.getWarp()
-        context.drawImage(warp.getTopPipeImg(),warp.getX(),warp.getTopPipeYPosition())
-        //ve pipe co chieu cao tuy y
-        //ve pipe co toa do tuy y
-        //ong lien tuc chay lui
+        //ve pipe 
+        context.drawImage(warp.getTopPipeImg(), warp.getX(), warp.getTopPipeYPosition())
+        context.drawImage(warp.getBotPipeImg(), warp.getX(), warp.getTopPipeYPosition() + warp.getHeight() + warp.getSize())
+        
+        // ve pipe co chieu cao tuy y
+        // ve pipe co toa do tuy y
+        // ong lien tuc chay lui
         requestAnimationFrame(drawFrame)
     }
 }

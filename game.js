@@ -1,6 +1,6 @@
 function Game() {
     let bird = new Bird(50, 0)
-    let warp = new Warp(0,50,0)
+    let warp = new Warp(258,242,125,5)
 
     document.addEventListener("keydown", function () {
         bird.jump()
