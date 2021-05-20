@@ -6,6 +6,14 @@ function Game() {
         // new Warp(228,222,125,5)
     ]
 
+    let addWarp = function () {
+        warps.push(
+            new Warp(258, Math.floor(Math.round() * 242) - 242, 125, 5)
+        )
+    }
+
+    setInterval(addWarp, 1000)
+
     document.addEventListener("keydown", function () {
         bird.jump()
     })

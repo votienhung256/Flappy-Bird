@@ -19,13 +19,7 @@ function ViewEngine(game) {
         for (let i = 0; i < warps.length; i++) {
             let warp = warps[i]
             context.drawImage(warp.getTopPipeImg(), warp.getX(), warp.getTopPipeYPosition())
-            context.drawImage(warp.getBotPipeImg(), warp.getX(), warp.getBotPipeYPosition())
-
-            if (warp.getX() == 144) {
-                warp.push(
-                    new Warp(258, Math.floor(Math.round() * 242) - 242, 125, 5)
-                )
-            }
+            context.drawImage(warp.getBotPipeImg(), warp.getX(), warp.getBotPipeYPosition())          
         }
 
         requestAnimationFrame(drawFrame)
