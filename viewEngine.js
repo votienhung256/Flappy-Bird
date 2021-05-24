@@ -3,7 +3,10 @@ function ViewEngine(game) {
     let context = canvas.getContext("2d")
 
     let hinhNen = new Image()
-    let width = 288
+    let widthOfCanvas = 288
+    let heightOfCanvas = 512
+    let widthOfBird = 38
+    let heightOfBird = 26
 
     hinhNen.src = "images/hinhnen.png"
 
@@ -28,9 +31,11 @@ function ViewEngine(game) {
             // if (warp.getX() == 0) {
             //     warps.splice(0, 1)
             // }
-            
-            //kiem tra va cham
 
+            //kiem tra va cham
+            if (bird.getY() + heightOfBird == heightOfCanvas){
+                
+            }
 
             //tinh diem
         }
