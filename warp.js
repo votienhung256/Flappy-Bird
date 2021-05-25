@@ -16,6 +16,11 @@ function Warp(xPos, yPos, size, vX) {
 
     let height = 242
 
+    //them
+    this.moveX = function () {
+        return setInterval(back, 1000 / 30)
+    }
+
     this.getTopPipeImg = function () {
         return topPipeImg
     }
